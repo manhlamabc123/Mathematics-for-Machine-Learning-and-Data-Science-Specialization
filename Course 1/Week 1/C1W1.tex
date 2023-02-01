@@ -1,0 +1,91 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage[utf8]{inputenc}
+\usepackage{tabto}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{wrapfig}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{hyperref}
+\graphicspath{ {./images/} }
+\author{Trần Đức Mạnh}
+\title{Course 1: Linear Algebra for Machine Learning \& Data Science\\Overview}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{System of linear equations: 2 variables}
+\subsection{System of sentences}
+\subsubsection{What is a system of sentences?}
+\begin{itemize}
+    \item A system of sentences is just a group of sentences
+    \item Example 1: A system of 2 sentences\\
+    \begin{tabular}{c|c|c}
+        System 1 & System 2 & System 3 \\
+        \hline
+        The dog is \textbf{Black} & The dog is \textbf{Black} & The dog is \textbf{Black} \\
+        The cat is \textbf{Orange} & The dog is \textbf{Black} & The dog is \textbf{White}
+    \end{tabular}
+    \item Example 2: A system of 3 sentences\\
+    \begin{tabular}{c|c|c|c}
+        System 1 & System 2 & System 3 & System 4 \\
+        \hline
+        The dog is \textbf{Black} & The dog is \textbf{Black} & The dog is \textbf{Black} & The dog is \textbf{Black} \\
+        The cat is \textbf{Orange} & The dog is \textbf{Black} & The dog is \textbf{Black} & The dog is \textbf{White} \\
+        The bird is \textbf{Red} & The bird is \textbf{Red} & The dog is \textbf{Black} & The bird is \textbf{Red} \\
+    \end{tabular}
+\end{itemize}
+
+\subsubsection{New concepts}
+\begin{enumerate}
+    \item Complete, Redundant, Contradictory
+    \begin{itemize}
+        \item \textbf{Complete:} when \textit{number of pieces of information} = \textit{number of sentences}\\Example: Ex1 - System 1, Ex2 - System 1
+        \item \textbf{Redundant:} when there are same sentences\\Example: Ex1 - System 2, Ex2 - System 2, Ex2 - System 3
+        \item \textbf{Contradictory:} when there are sentences contradict each other\\Example: Ex1 - System 3, Ex2 - System 4
+    \end{itemize}
+    \item Singular \& non-Singular
+    \begin{itemize}
+        \item \textbf{Singular}: when the system is Complete
+        \item \textbf{non-Singular}: when the system is not Complete
+    \end{itemize}
+\end{enumerate}
+
+\section{System of linear equations: 3 variables}
+
+\end{document}
