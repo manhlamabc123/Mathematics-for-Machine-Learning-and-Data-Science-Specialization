@@ -54,37 +54,89 @@
 \subsubsection{What is a system of sentences?}
 \begin{itemize}
     \item A system of sentences is just a group of sentences
-    \item Example 1: A system of 2 sentences\\
-    \begin{tabular}{c|c|c}
-        System 1 & System 2 & System 3 \\
-        \hline
-        The dog is \textbf{Black} & The dog is \textbf{Black} & The dog is \textbf{Black} \\
-        The cat is \textbf{Orange} & The dog is \textbf{Black} & The dog is \textbf{White}
-    \end{tabular}
-    \item Example 2: A system of 3 sentences\\
-    \begin{tabular}{c|c|c|c}
-        System 1 & System 2 & System 3 & System 4 \\
-        \hline
-        The dog is \textbf{Black} & The dog is \textbf{Black} & The dog is \textbf{Black} & The dog is \textbf{Black} \\
-        The cat is \textbf{Orange} & The dog is \textbf{Black} & The dog is \textbf{Black} & The dog is \textbf{White} \\
-        The bird is \textbf{Red} & The bird is \textbf{Red} & The dog is \textbf{Black} & The bird is \textbf{Red} \\
-    \end{tabular}
+    \item Example 1: A system of 2 sentences
+          \begin{align*}
+              \begin{tabular}{c|c|c}
+                  System 1                   & System 2                  & System 3                  \\
+                  \hline
+                  The dog is \textbf{Black}  & The dog is \textbf{Black} & The dog is \textbf{Black} \\
+                  The cat is \textbf{Orange} & The dog is \textbf{Black} & The dog is \textbf{White}
+              \end{tabular}
+          \end{align*}
+    \item Example 2: A system of 3 sentences
+          \begin{align*}
+              \begin{tabular}{c|c|c|c}
+                  System 1                   & System 2                  & System 3                  & System 4                  \\
+                  \hline
+                  The dog is \textbf{Black}  & The dog is \textbf{Black} & The dog is \textbf{Black} & The dog is \textbf{Black} \\
+                  The cat is \textbf{Orange} & The dog is \textbf{Black} & The dog is \textbf{Black} & The dog is \textbf{White} \\
+                  The bird is \textbf{Red}   & The bird is \textbf{Red}  & The dog is \textbf{Black} & The bird is \textbf{Red}  \\
+              \end{tabular}
+          \end{align*}
 \end{itemize}
 
 \subsubsection{New concepts}
 \begin{enumerate}
     \item Complete, Redundant, Contradictory
-    \begin{itemize}
-        \item \textbf{Complete:} when \textit{number of pieces of information} = \textit{number of sentences}\\Example: Ex1 - System 1, Ex2 - System 1
-        \item \textbf{Redundant:} when there are same sentences\\Example: Ex1 - System 2, Ex2 - System 2, Ex2 - System 3
-        \item \textbf{Contradictory:} when there are sentences contradict each other\\Example: Ex1 - System 3, Ex2 - System 4
-    \end{itemize}
+          \begin{itemize}
+              \item \textbf{Complete:} when \textit{number of pieces of information} = \textit{number of sentences}\\Example: Ex1 - System 1, Ex2 - System 1
+              \item \textbf{Redundant:} when there are same sentences\\Example: Ex1 - System 2, Ex2 - System 2, Ex2 - System 3
+              \item \textbf{Contradictory:} when there are sentences contradict each other\\Example: Ex1 - System 3, Ex2 - System 4
+          \end{itemize}
     \item Singular \& non-Singular
-    \begin{itemize}
-        \item \textbf{Singular}: when the system is Complete
-        \item \textbf{non-Singular}: when the system is not Complete
-    \end{itemize}
+          \begin{itemize}
+              \item \textbf{Singular}: when the system is Complete
+              \item \textbf{non-Singular}: when the system is not Complete
+          \end{itemize}
 \end{enumerate}
+
+\subsection{System of equations}
+
+\subsubsection{From sentences to equations}
+\begin{align*}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Sentences} & \textbf{Sentences with numbers}            & \textbf{Equations} \\
+        \hline
+        The dog is black   & The price of an apple and a banana is \$10 & $a + b = 10$       \\
+        \hline
+    \end{tabular}
+\end{align*}
+
+\subsubsection{Systems of equations}
+\begin{align*}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{System 1}        & \textbf{System 2}           & \textbf{System 3}      \\
+        \hline
+        $a + b = 10$             & $a + b = 10$                & $a + b = 10$           \\
+        $a + 2b = 12$            & $2a + 2b = 20$              & $2a + 2b = 24$         \\
+        \hline
+        \textbf{Unique Solution} & \textbf{Infinite solutions} & \textbf{No solution}   \\
+        \hline
+        $a = 8$                  & $a=8,7,6,...$               &                        \\
+        $b = 2$                  & $b=2,3,4,...$               &                        \\
+        \hline
+        \textbf{Complete}        & \textbf{Redundant}          & \textbf{Contradictory} \\
+        \hline
+        \textit{Non-singular}    & \textit{Singular}           & \textit{Singular}      \\
+        \hline
+    \end{tabular}
+\end{align*}
+
+
+\subsubsection{What is a linear equation?}
+\begin{align*}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Linear}            & \textbf{non-Linear}                                \\
+        \hline
+        $a + b = 10$               & $a^2 + b^2 = 20$                                   \\
+        $3.4a - 48.99b+2c = 122.5$ & $ab^2 + \frac{b}{a} - \frac{3}{b} - \log{c} = 4^a$ \\
+        \hline
+    \end{tabular}
+\end{align*}
+$\rightarrow$ \textbf{Linear Algebra is the study of Linear equations}
 
 \section{System of linear equations: 3 variables}
 
