@@ -14,6 +14,9 @@
 \usepackage{wrapfig}
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
 \graphicspath{ {./images/} }
 \author{Trần Đức Mạnh}
 \title{Course 1: Linear Algebra for Machine Learning \& Data Science\\Overview}
@@ -137,6 +140,91 @@
     \end{tabular}
 \end{align*}
 $\rightarrow$ \textbf{Linear Algebra is the study of Linear equations}
+
+\subsection{System of equations as lines}
+\begin{align*}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{System 1}        & \textbf{System 2}           & \textbf{System 3}      \\
+        \hline
+        $a + b = 10$             & $a + b = 10$                & $a + b = 10$           \\
+        $a + 2b = 12$            & $2a + 2b = 20$              & $2a + 2b = 24$         \\
+        \hline
+        \textbf{Unique Solution} & \textbf{Infinite solutions} & \textbf{No solution}   \\
+        \hline
+        $a = 8$                  & $a=8,7,6,...$               &                        \\
+        $b = 2$                  & $b=2,3,4,...$               &                        \\
+        \hline
+        \textbf{Complete}        & \textbf{Redundant}          & \textbf{Contradictory} \\
+        \hline
+        \textit{Non-singular}    & \textit{Singular}           & \textit{Singular}      \\
+        \hline
+    \end{tabular}
+\end{align*}
+
+\begin{center}
+	\begin{tikzpicture}
+	    \datavisualization [school book axes,
+	        visualize as smooth line/.list={a, b},
+	        visualize as scatter/.list={c},
+	        y axis={label=b, ticks={step=2}, length=5cm},
+	        x axis={label=a, ticks={step=2}, length=5cm}]
+	
+	    data [format=function, set=a] {
+	            var x : interval [-1:10];
+	            func y = 10 - \value x;
+	        }
+	    data [format=function, set=b] {
+	            var x : interval [-1:10];
+	            func y =6 - \value x / 2;
+	        }
+	    info' {
+	    \fill [black] (visualization cs: x=8, y=2) circle [radius=1mm] node [above,font=\footnotesize] {(8, 2)};
+	    };
+	\end{tikzpicture}
+    \captionof{figure}{System 1}
+\end{center}
+
+\begin{center}
+	\begin{tikzpicture}
+	    \datavisualization [school book axes,
+	        visualize as smooth line/.list={a, b},
+	        visualize as scatter/.list={c},
+	        y axis={label=b, ticks={step=2}, length=5cm},
+	        x axis={label=a, ticks={step=2}, length=5cm}]
+	
+	    data [format=function, set=a] {
+	            var x : interval [-1:10];
+	            func y = 10 - \value x;
+	        }
+        data [format=function, set=c] {
+	            var x : interval [-1:10];
+	            func y = 10 - \value x;
+	        };
+	\end{tikzpicture}
+    \captionof{figure}{System 2}
+\end{center}
+
+\begin{center}
+	\begin{tikzpicture}
+	    \datavisualization [school book axes,
+	        visualize as smooth line/.list={a, b},
+	        visualize as scatter/.list={c},
+	        y axis={label=b, ticks={step=2}, length=5cm},
+	        x axis={label=a, ticks={step=2}, length=5cm}]
+	
+	    data [format=function, set=a] {
+	            var x : interval [-1:10];
+	            func y = 10 - \value x;
+	        }
+        data [format=function, set=b] {
+	            var x : interval [-1:10];
+	            func y = 12 - \value x;
+	        };
+	\end{tikzpicture}
+    \captionof{figure}{System 3}
+\end{center}
+
 
 \section{System of linear equations: 3 variables}
 
