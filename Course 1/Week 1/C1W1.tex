@@ -163,65 +163,65 @@ $\rightarrow$ \textbf{Linear Algebra is the study of Linear equations}
 \end{align*}
 
 \begin{center}
-	\begin{tikzpicture}
-	    \datavisualization [school book axes,
-	        visualize as smooth line/.list={a, b},
-	        visualize as scatter/.list={c},
-	        y axis={label=b, ticks={step=2}, length=5cm},
-	        x axis={label=a, ticks={step=2}, length=5cm}]
-	
-	    data [format=function, set=a] {
-	            var x : interval [-1:10];
-	            func y = 10 - \value x;
-	        }
-	    data [format=function, set=b] {
-	            var x : interval [-1:10];
-	            func y =6 - \value x / 2;
-	        }
-	    info' {
-	    \fill [black] (visualization cs: x=8, y=2) circle [radius=1mm] node [above,font=\footnotesize] {(8, 2)};
-	    };
-	\end{tikzpicture}
+    \begin{tikzpicture}
+        \datavisualization [school book axes,
+            visualize as smooth line/.list={a, b},
+            visualize as scatter/.list={c},
+            y axis={label=b, ticks={step=2}, length=5cm},
+            x axis={label=a, ticks={step=2}, length=5cm}]
+
+        data [format=function, set=a] {
+                var x : interval [-1:10];
+                func y = 10 - \value x;
+            }
+        data [format=function, set=b] {
+                var x : interval [-1:10];
+                func y =6 - \value x / 2;
+            }
+        info' {
+        \fill [black] (visualization cs: x=8, y=2) circle [radius=1mm] node [above,font=\footnotesize] {(8, 2)};
+        };
+    \end{tikzpicture}
     \captionof{figure}{System 1}
 \end{center}
 
 \begin{center}
-	\begin{tikzpicture}
-	    \datavisualization [school book axes,
-	        visualize as smooth line/.list={a, b},
-	        visualize as scatter/.list={c},
-	        y axis={label=b, ticks={step=2}, length=5cm},
-	        x axis={label=a, ticks={step=2}, length=5cm}]
-	
-	    data [format=function, set=a] {
-	            var x : interval [-1:10];
-	            func y = 10 - \value x;
-	        }
+    \begin{tikzpicture}
+        \datavisualization [school book axes,
+            visualize as smooth line/.list={a, b},
+            visualize as scatter/.list={c},
+            y axis={label=b, ticks={step=2}, length=5cm},
+            x axis={label=a, ticks={step=2}, length=5cm}]
+
+        data [format=function, set=a] {
+                var x : interval [-1:10];
+                func y = 10 - \value x;
+            }
         data [format=function, set=c] {
-	            var x : interval [-1:10];
-	            func y = 10 - \value x;
-	        };
-	\end{tikzpicture}
+                var x : interval [-1:10];
+                func y = 10 - \value x;
+            };
+    \end{tikzpicture}
     \captionof{figure}{System 2}
 \end{center}
 
 \begin{center}
-	\begin{tikzpicture}
-	    \datavisualization [school book axes,
-	        visualize as smooth line/.list={a, b},
-	        visualize as scatter/.list={c},
-	        y axis={label=b, ticks={step=2}, length=5cm},
-	        x axis={label=a, ticks={step=2}, length=5cm}]
-	
-	    data [format=function, set=a] {
-	            var x : interval [-1:10];
-	            func y = 10 - \value x;
-	        }
+    \begin{tikzpicture}
+        \datavisualization [school book axes,
+            visualize as smooth line/.list={a, b},
+            visualize as scatter/.list={c},
+            y axis={label=b, ticks={step=2}, length=5cm},
+            x axis={label=a, ticks={step=2}, length=5cm}]
+
+        data [format=function, set=a] {
+                var x : interval [-1:10];
+                func y = 10 - \value x;
+            }
         data [format=function, set=b] {
-	            var x : interval [-1:10];
-	            func y = 12 - \value x;
-	        };
-	\end{tikzpicture}
+                var x : interval [-1:10];
+                func y = 12 - \value x;
+            };
+    \end{tikzpicture}
     \captionof{figure}{System 3}
 \end{center}
 
