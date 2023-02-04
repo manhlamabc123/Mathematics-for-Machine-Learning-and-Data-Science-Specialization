@@ -15,6 +15,7 @@
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{hyperref}
 \usepackage{tikz}
+\usepackage{multirow}
 \usetikzlibrary{datavisualization}
 \usetikzlibrary{datavisualization.formats.functions}
 \graphicspath{ {./images/} }
@@ -225,6 +226,30 @@ $\rightarrow$ \textbf{Linear Algebra is the study of Linear equations}
     \captionof{figure}{System 3}
 \end{center}
 
+\subsection{Singular vs non-singular matrices}
+\begin{align*}
+	\begin{tabular}{|c|c|}
+	    \hline
+	    $a + b = 0$ & \multirow{2}{*}{$\begin{pmatrix}
+	        1 & 1\\
+	        1 & 2
+	        \end{pmatrix}$}\\
+	    $a + 2b = 0$ & \\
+	    \hline
+	    Non-singular system & Non-singular matrix \\
+	    \hline
+	    \multicolumn{2}{c}{} \\
+	    \hline
+	    $a + b = 0$ & \multirow{2}{*}{$\begin{pmatrix}
+	        1 & 1\\
+	        2 & 2
+	        \end{pmatrix}$}\\
+	    $2a + 2b = 0$ & \\
+	    \hline
+	    Singular system & Singular matrix \\
+	    \hline
+	\end{tabular}
+\end{align*}
 
 \section{System of linear equations: 3 variables}
 
